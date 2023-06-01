@@ -5,38 +5,36 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    private float movementInputDirection;
-    private float jumpTimer;
-    private float turnTimer;
-    private float wallJumpTimer;
-    private float dashTimeLeft;
-    private float lastImageXpos;
-    private float lastDash = -100f;
-    private float knockbackStartTime;
+    private float movementInputDirection,
+        jumpTimer,
+        turnTimer,
+        wallJumpTimer,
+        dashTimeLeft,
+        lastImageXpos,
+        lastDash = -100f, 
+        knockbackStartTime;
     [SerializeField]
     private float knockbackDuration;
 
-    private int amountOfJumpsLeft;
-    private int facingDirection = 1;
-    private int lastWallJumpDirection;
+    private int amountOfJumpsLeft, facingDirection = 1, lastWallJumpDirection;
 
-    private bool isFacingRight = true;
-    private bool isWalking;
-    private bool isGrounded;
-    private bool isTouchingWall;
-    private bool isWallSliding;
-    private bool canNormalJump;
-    private bool canWallJump;
-    private bool isAttemptingToJump;
-    private bool checkJumpMultiplier;
-    private bool canMove;
-    private bool canFlip;
-    private bool hasWallJumped;
-    private bool isTouchingLedge;
-    private bool canClimbLedge = false;
-    private bool ledgeDetected;
-    private bool isDashing;
-    private bool knockback;
+    private bool isFacingRight = true,
+        isWalking,
+        isGrounded,
+        isTouchingWall,
+        isWallSliding,
+        canNormalJump,
+        canWallJump,
+        isAttemptingToJump,
+        checkJumpMultiplier,
+        canMove,
+        canFlip,
+        hasWallJumped,
+        isTouchingLedge,
+        canClimbLedge = false,
+        ledgeDetected,
+        isDashing,
+        knockback;
 
     [SerializeField]
     private Vector2 knockbackSpeed;
